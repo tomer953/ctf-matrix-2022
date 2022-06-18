@@ -1,0 +1,16 @@
+# clone gap
+git clone https://github.com/nemanja-m/gaps.git
+cd gaps/
+
+# install python requirements
+sudo apt update
+sudo apt install python3-pip
+sudo apt install python-is-python3
+
+# install project requirements
+pip install -r requirements.txt
+sudo apt-get install python-tk
+pip install -e .
+
+# solve puzzle (takes 10 minutes)
+./bin/gaps --image=puzzle.png --generations=20 --population=600 --size=60 --save
